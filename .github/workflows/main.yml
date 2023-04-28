@@ -1,7 +1,9 @@
 
 name: Flutter Workflow
 
-on: 
+on:
+  tags:
+    - '*' 
   pull_request:
     branches:
       - main
