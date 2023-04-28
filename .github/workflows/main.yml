@@ -4,14 +4,10 @@ name: Flutter Workflow
 on:
   
   pull_request:
-    tags:
-      - '*'
     branches:
       - main
       - master
   push:
-    tags:
-      - '*' 
     branches:
       - main
       - master
@@ -34,6 +30,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/flutter-apk/*"
+          tags: v1.0.${{ github.run_number}}
           token: ${{ secrets.TOKEN }}
 
       
