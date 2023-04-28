@@ -2,13 +2,16 @@
 name: Flutter Workflow
 
 on:
-  tags:
-    - '*' 
+  
   pull_request:
+    tags:
+      - '*'
     branches:
       - main
       - master
   push:
+    tags:
+      - '*' 
     branches:
       - main
       - master
